@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SINGUP</title>
+    <script>
+        function validate()
+        {        
+        var unm, pnm, mob;
+        unm= document.getElementById("uname").value;
+        pnm =document.getElementById("pname").value;
+        mob =document.getElementById("mobile").value;
+        if(unm=="")
+        {
+            alert("user name is blank");
+            document.getElementById("uname").focus();
+            return false;
+
+        }
+        else if(!unm.match(/^[/w/W]{6,10}&/))
+        {
+            alert("user name must be b/w 6 & 8 char long");
+            document.getElementById("uname").focus();
+            return false;
+
+        }
+    }
+    </script>
+</head>
+<body>
+    <center>
+        <form action="#" onsubmit="return validate()">
+            <table>
+                <tr>
+                    <td >
+                        user name
+                    </td>
+                    <td> <input type="text" id="uname"></td>
+                </tr>
+                <tr>
+                    <td >
+                        password
+                    </td>
+                    <td> <input type="text" id="pname"></td>
+                </tr>
+                <tr>
+                    <td >
+                        mobile-no
+                    </td>
+                    <td><input type="text" id="mobile" ></td>
+                <tr>
+                        
+                        <td><input type="submit" value="Signup"></td>
+                    
+                </tr>
+            </table>
+
+        </form>
+    </center>
+    
+</body>
+</html>

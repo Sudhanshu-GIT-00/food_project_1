@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>food</title>
+    <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body class="p-3 m-0 border-0 bd-example">
+    <!-- Example Code -->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home food.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">about</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">contact us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Restaurants near me
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Restaurant</a></li>
+                            <li><a class="dropdown-item" href="#">location</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">deatils</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled"></a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-danger" type="submit" fdprocessedid="bx78dl">Search</button>
+                </form>
+
+
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- <a href="random.html" > Random Food</a> -->
+    <div class="container">
+        <div class="meal-wrapper">
+            <div class="meal-search">
+                <h2 class="title">Find Meal For Your Ingredients</h2>
+                <blockquote> Real food dosen't have Ingredients; Real food is Ingredients.</blockquote><br>
+                <cite>--MR AMAN RAJA</cite>
+                </blockquote>
+                <div class="meal-search-box">
+                    <input type="text" class="search-control" placeholder="      Enter an ingredients" id="search-inj"
+                        width="700px">
+                    <button type="submit" class="search-btn btn" id="search-btn" onclick="Search()">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="meal-result">
+                <h2 class="title">Your search Ingredients</h2>
+                <div id="meal">
+                    <!--  <div class="meal-item">
+                        <div class="meal-img">
+                            <img src="photo/food.jpg" alt="food">
+                        </div>
+                        <div class="meal-name">
+                            <h3>Potato Chips</h3>
+                            <a href="#" class="recipe-btn">Get Recipe </a>
+                        </div>
+                    </div>
+                    <div class="meal-item">
+                        <div class="meal-img">
+                            <img src="photo/food.jpg" alt="food">
+                        </div>
+                        <div class="meal-name">
+                            <h3>Potato Chips</h3>
+                            <a href="#" class="recipe-btn">Get Recipe </a>
+                        </div>
+                    </div>
+                    <div id="meal">
+                        <div class="meal-item">
+                            <div class="meal-img">
+                                <img src="photo/food.jpg" alt="food">
+                            </div>
+                            <div class="meal-name">
+                                <h3>Potato Chips</h3>
+                                <a href="#" class="recipe-btn">Get Recipe </a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="meal-details">
+            <button type="button" class="btn recipe-close-btn" id="recipe-close-btn">
+                <i class="fas fa-times"> </i>
+            </button>
+            <div class="meal-deatils-content">
+                <!-- <h2 class="recipe-title">Meal Name Here</h2>
+                <p class="recipe-category"> Category Name</p>
+                <div class="recipe-instruct">
+                    <h3>INSTRUCTIONS</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia nostrum neque quibusdam ut expedita omnis eaque
+                         perferendis totam, impedit tenetur pariatur ullam minus quas ducimus
+                         magnam natus doloribus ratione saepe, explicabo harum, exercitationem ipsum! Et, quae, nam eaque 
+                         vel optio maiores accusantium amet possimus deleniti quasi adipisci repudiandae, est quis?
+                    </P>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sed eveniet eligendi accusamus
+                         nulla ipsa obcaecati atque aliquid hic iure.</p>
+                </div>
+
+                <div class="recipe-meal-img"> 
+                    <img src="photo/chiken.jpg" alt="aman">
+                </div>
+                <div class="recipe-link">
+                    <a href="#" target="_blank">Watch Video</a>
+                </div> -->
+            </div>
+        </div>
+
+    </div>
+
+    <!-- footer -->
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+    <div class="container my-5">
+        <!-- Footer -->
+        <footer class="text-center text-lg-start text-white" style="background-color: #929fba">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+                <!-- Section: Links -->
+                <section class="footer">
+                    <!--Grid row-->
+                    <div class="row">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">
+                                Company name
+                            </h6>
+                            <p>
+                                Here you can use rows and columns to organize your footer
+                                content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                                elit.
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <hr class="w-100 clearfix d-md-none" />
+
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                            <p>
+                                <a class="text-white">F.Maker</a>
+                            </p>
+                            <p>
+                                <a class="text-white"> Partner With Us</a>
+                            </p>
+                            <p>
+                                <a class="text-white"> Apps For You</a>
+                            </p>
+                            <p>
+                                <a class="text-white">Food.maker for work</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <hr class="w-100 clearfix d-md-none" />
+
+                        <!-- Grid column -->
+                        <hr class="w-100 clearfix d-md-none" />
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                            <p><i class="fas fa-home mr-3"></i> India, Bihar Buxar. 802101</p>
+                            <p><i class="fas fa-envelope mr-3"></i> foodmakker@gmail.com</p>
+                            <p><i class="fas fa-phone mr-3"></i>+91 7979959747</p>
+                            <p><i class="fas fa-print mr-3"></i>+91 9155298153</p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">SOCIAL LINKS</h6>
+
+                            <!-- Facebook -->
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998"
+                                href="https://www.facebook.com/sudhanshu.ranjan.1675275?mibextid=ZbWKwL"
+                                role="button"><i class="fab fa-facebook-f"></i></a>
+
+                            <!-- Twitter -->
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee"
+                                href="https://twitter.com/Sudhanshu797995?t=QjO5QE8uOiw0bmJ2NJ9MZg&s=09"
+                                role="button"><i class="fab fa-twitter"></i></a>
+
+                            <!-- Google -->
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39"
+                                href="https://mail.google.com/mail/u/0/#inbox" role="button"><i
+                                    class="fab fa-google"></i></a>
+
+                            <!-- Instagram -->
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac"
+                                href="https://www.instagram.com/invites/contact/?i=mg2gkg7uf3u7&utm_content=1uzhziz"
+                                role="button"><i class="fab fa-instagram"></i></a>
+
+                            <!-- Linkedin -->
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca"
+                                href="https://www.linkedin.com/in/sudhanshu-ranjan-405375243" role="button"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                            <!-- Github -->
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #333333"
+                                href="https://github.com/a-ma-nraja" role="button"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <!--Grid row-->
+                </section>
+                <!-- Section: Links -->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                © 2022 Copyright :: rsudhanshu119@gmail.com
+                <a class="text-white" href="#"></a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </div>
+    <!-- End of .container -->
+    </div>
+</body>
+
+</html>
